@@ -2,6 +2,10 @@
 # Sync public-OpenWRT repo locally
 # Works on OpenWrt/GL.iNet
 
+# Install minimal deps for HTTPS git + dir
+opkg update
+opkg install git git-http ca-bundle ca-certificates libcurl4 coreutils-dir nano
+
 set -e
 
 # Require root (sudo usually isn't present on OpenWrt)
